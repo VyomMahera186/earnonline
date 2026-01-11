@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Disclosure - EarnOnline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #10b981;
+            --dark: #1f2937;
+            --gray: #6b7280;
+            --light-gray: #f3f4f6;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: var(--white);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: opacity 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 4rem 3rem;
+            text-align: center;
+            width: 100%;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-section p {
+            opacity: 0.9;
+            font-size: 1.2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 3rem;
+            width: 100%;
+            flex: 1;
+        }
+
+        .disclosure-content h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-top: 3.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .disclosure-content h3 {
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .disclosure-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .disclosure-content ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .disclosure-content ul li {
+            padding: 1rem 0;
+            padding-left: 2.5rem;
+            position: relative;
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        .disclosure-content ul li::before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: 0.8rem;
+        }
+
+        .highlight-box {
+            background: #fef3c7;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #f59e0b;
+            margin: 2.5rem 0;
+        }
+
+        .info-box {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            margin: 2.5rem 0;
+        }
+
+        .highlight-box strong, .info-box strong {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .last-updated {
+            background: var(--light-gray);
+            padding: 1.2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1rem;
+            color: var(--gray);
+        }
+
+        .example-box {
+            background: var(--white);
+            border: 2px solid var(--light-gray);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2.5rem 0;
+        }
+
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding: 3rem 3rem;
+            text-align: center;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+            font-size: 1.05rem;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 1.5rem;
+            }
+
+            .hero-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.95rem;
+            }
+
+            .container {
+                padding: 3rem 1.5rem;
+            }
+
+            .disclosure-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .disclosure-content h3 {
+                font-size: 1.3rem;
+            }
+            /* ===== CONTENT RHYTHM FIX ===== */
+
+.page-content h2 {
+    margin-top: 2.2rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.5rem;
+}
+
+.page-content p {
+    margin-bottom: 1.1rem;
+    line-height: 1.75;
+}
+
+.page-content ul {
+    margin: 0.8rem 0 1.4rem 1.2rem;
+}
+
+.page-content ul li {
+    margin-bottom: 0.4rem;
+}
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">💰 EarnOnline</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="guides.html">Guides</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="resources.html">Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <h1>Affiliate Disclosure</h1>
+        <p>Transparency matters. Here's how we earn and what it means for you.</p>
+    </section>
+
+    <div class="container">
+        <div class="last-updated">
+            <strong>Last Updated:</strong> January 1, 2026
+        </div>
+
+        <div class="disclosure-content">
+            <p>At EarnOnline, we believe in complete transparency with our readers. This Affiliate Disclosure explains how we earn commissions through affiliate relationships and what it means for you as a visitor to our website.</p>
+
+            <div class="highlight-box">
+                <strong>⚠️ Important Notice:</strong> Some of the links on this website are affiliate links. This means we may earn a commission if you click through and make a purchase, at no additional cost to you. We only recommend products and services we genuinely believe in and have researched thoroughly.
+            </div>
+
+            <h2>What Are Affiliate Links?</h2>
+            <p>Affiliate links are special tracking URLs that allow us to earn a commission when you purchase a product or service after clicking our link. These links help us monetize our content while keeping our guides and resources free for you.</p>
+
+            <div class="example-box">
+                <strong>Example:</strong> If we write a review about an AI tool and you click our affiliate link to purchase a subscription, we may receive a percentage of the sale as a commission. The price you pay remains the same whether you use our link or not.
+            </div>
+
+            <h2>Our Commitment to You</h2>
+            <p>Your trust is paramount to us. Here's what we promise:</p>
+
+            <h3>1. Honest Recommendations</h3>
+            <p>We only recommend products, tools, and services that we:</p>
+            <ul>
+                <li>Have personally used, tested, or thoroughly researched</li>
+                <li>Genuinely believe will provide value to our readers</li>
+                <li>Would recommend to friends and family</li>
+                <li>Feel align with our values and mission</li>
+            </ul>
+
+            <h3>2. No Additional Cost to You</h3>
+            <p>When you purchase through our affiliate links, you pay the same price you would pay going directly to the vendor's website. Sometimes, you may even receive exclusive discounts through our affiliate partnerships.</p>
+
+            <h3>3. Objective Reviews</h3>
+            <p>The existence of an affiliate relationship does not influence our editorial content. We provide honest, unbiased reviews and clearly identify both pros and cons of products we recommend.</p>
+
+            <h3>4. Clear Identification</h3>
+            <p>We clearly disclose affiliate relationships in our content. You'll see notices like "This post contains affiliate links" or similar disclaimers where applicable.</p>
+
+            <h2>Types of Affiliate Relationships</h2>
+            <p>We participate in several types of affiliate programs:</p>
+
+            <ul>
+                <li><strong>Direct Affiliate Programs:</strong> Partnerships directly with product creators and companies</li>
+                <li><strong>Affiliate Networks:</strong> Programs through networks like Amazon Associates, ShareASale, ClickBank, and Commission Junction</li>
+                <li><strong>Sponsored Content:</strong> Occasionally, we create sponsored content that is clearly labeled as such</li>
+                <li><strong>Course and Product Sales:</strong> We may earn commissions by promoting online courses, software tools, and digital products</li>
+            </ul>
+
+            <h2>How Affiliate Commissions Work</h2>
+            <p>When you click an affiliate link and make a purchase, we typically earn a commission ranging from 5% to 50% of the sale price, depending on the product or service. These commissions help us:</p>
+            <ul>
+                <li>Cover website hosting and maintenance costs</li>
+                <li>Invest in creating high-quality, free content</li>
+                <li>Purchase and test products to review</li>
+                <li>Continue providing valuable resources to our community</li>
+            </ul>
+
+            <h2>Your Rights and Choices</h2>
+            <p>You are never obligated to use our affiliate links. You're free to:</p>
+            <ul>
+                <li>Search for products directly instead of clicking our links</li>
+                <li>Use coupon codes or discounts you find elsewhere</li>
+                <li>Choose alternative products not mentioned on our website</li>
+                <li>Read multiple reviews before making a purchase decision</li>
+            </ul>
+
+            <div class="info-box">
+                <strong>💡 Pro Tip:</strong> If you find our content helpful and want to support us at no extra cost, using our affiliate links when making purchases is a great way to do so!
+            </div>
+
+            <h2>Products We May Promote</h2>
+            <p>Categories of products and services we may earn affiliate commissions from include:</p>
+            <ul>
+                <li>AI and productivity software tools</li>
+                <li>Web hosting and domain services</li>
+                <li>Email marketing platforms</li>
+                <li>Online course platforms and educational programs</li>
+                <li>Freelancing platforms and marketplaces</li>
+                <li>E-commerce and business tools</li>
+                <li>Books, guides, and digital resources</li>
+            </ul>
+
+            <h2>Disclaimer</h2>
+            <p>While we strive to provide accurate and helpful information, please note:</p>
+            <ul>
+                <li>We are not responsible for the quality, features, or performance of third-party products</li>
+                <li>Product features, pricing, and availability may change without our knowledge</li>
+                <li>Your results may vary when using products or services we recommend</li>
+                <li>We encourage you to conduct your own research before making purchases</li>
+            </ul>
+
+            <h2>FTC Compliance</h2>
+            <p>This disclosure complies with the Federal Trade Commission's guidelines on endorsements and testimonials. We are committed to maintaining ethical affiliate marketing practices and providing honest recommendations to our audience.</p>
+
+            <h2>Questions About Our Affiliate Relationships?</h2>
+            <p>If you have questions about our affiliate relationships or would like more information about specific partnerships, please don't hesitate to contact us.</p>
+
+            <div class="info-box">
+                <strong>Contact Us:</strong><br>
+                <strong>Email:</strong> earnonline2101@gmail.com<br>
+                <strong>Contact Form:</strong> <a href="contact.html" style="color: var(--primary);">Click Here</a>
+            </div>
+
+            <h2>Changes to This Disclosure</h2>
+            <p>We may update this Affiliate Disclosure from time to time to reflect changes in our practices or legal requirements. The "Last Updated" date at the top of this page indicates when this disclosure was last revised.</p>
+
+            <p style="margin-top: 3rem;"><strong>Thank you for supporting EarnOnline!</strong> Your trust means everything to us, and we're committed to providing valuable, honest content that helps you achieve your online earning goals.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="contact.html">Contact</a>
+            <a href="affiliate.html">Affiliate Disclosure</a>
+        </div>
+        <p>&copy; 2026 EarnOnline. All rights reserved.</p>
+    </footer>
+</body>
+</html>
