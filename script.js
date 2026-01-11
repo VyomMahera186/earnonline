@@ -90,12 +90,5 @@ document.addEventListener('DOMContentLoaded', () => {
     renderArticles(resourcesArticles, 'resourcesContainer');
 });
 
-/* ===============================
-   NEWSLETTER (IF USED)
-================================ */
 
-function handleNewsletter(e) {
-    e.preventDefault();
-    alert('Thank you for subscribing!');
-    e.target.reset();
-}
+
